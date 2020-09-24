@@ -36,3 +36,89 @@
     transform: rotate(360deg);
   }
 }
+
+.main-container {
+  border: 1px solid lightgray;
+}
+
+.header {
+  font-size: x-large;
+  font-weight: bold;
+  line-height: 5rem;
+  padding-left: 5rem;
+  height: 5rem;
+  border: 1px solid black;
+}
+
+.movie-poster {
+  height: 15rem;
+  width: 13rem;
+}
+
+.movie-card {
+  margin: 2rem;
+  width: 13rem;
+  border: 1px solid grey;
+}
+
+.movie-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.movie-container {
+  display: flex;
+}
+.reviews {
+  display: flex;
+  margin: 2rem;
+}
+
+.headline {
+  font-size: 19px;
+  margin-top: 1rem;
+  margin-bottom: 1px;
+}
+
+.content {
+  font-size: 15px;
+  margin: 1px;
+  color: gray;
+}
+
+.add-content {
+  height: 15rem;
+  margin: 0.2rem;
+}
+.add-headline {
+  height: 2rem;
+  margin: 0.2rem;
+}
+.add-review {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  width: 20rem;
+  height: fit-content;
+}
+
+.review-list {
+  margin-left: 2rem;
+}
+
+.add-review-text {
+  text-align: center;
+  font-size: large;
+  font-weight: bold;
+}
+
+.review-list-text {
+  font-size: large;
+  font-weight: bold;
+}
+
+.submit-button {
+  margin: 0.4rem;
+  width: fit-content;
+  align-self: flex-end;
+}
