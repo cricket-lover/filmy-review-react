@@ -1,11 +1,11 @@
 import React from 'react';
-import Header from './Header';
+import HeaderWithSearch from './HeaderWithSearch';
 import Dashboard from './Dashboard';
 
-const Homepage = ({ details }) => {
+const Homepage = ({ details, handleChange, value }) => {
   return (
     <div className="main-container">
-      <Header />
+      <HeaderWithSearch handleChange={handleChange} value={value} />
       <Dashboard details={details} />
     </div>
   );

@@ -42,12 +42,36 @@
 }
 
 .header {
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.logo-name {
   font-size: x-large;
   font-weight: bold;
   line-height: 5rem;
   padding-left: 5rem;
   height: 5rem;
-  border: 1px solid black;
+}
+
+.search {
+  margin-top: 2rem;
+}
+
+.search-text {
+  height: 1rem;
+  border: none;
+  border-bottom: 1px solid gray;
+  font-size: 15px;
+  outline: none;
+}
+
+.search-image {
+  height: 1.2em;
+  margin-left: 0.5rem;
+  margin-right: 10rem;
 }
 
 .movie-poster {
@@ -58,6 +82,7 @@
 .movie-card {
   margin: 2rem;
   width: 13rem;
+  height: 20rem;
   border: 1px solid grey;
 }
 
@@ -68,10 +93,6 @@
 
 .movie-container {
   display: flex;
-}
-.reviews {
-  display: flex;
-  margin: 2rem;
 }
 
 .headline {
@@ -100,10 +121,12 @@
   flex-direction: column;
   width: 20rem;
   height: fit-content;
+  margin: 2rem;
 }
 
 .review-list {
-  margin-left: 2rem;
+  margin: 2rem;
+  width: 15rem;
 }
 
 .add-review-text {
@@ -121,4 +144,22 @@
   margin: 0.4rem;
   width: fit-content;
   align-self: flex-end;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.movie-title {
+  margin-top: 1rem;
+  margin-left: 3px;
+  font-size: 19px;
+  font-weight: 500;
+}
+
+.release-date {
+  font-size: 13px;
+  margin-left: 3px;
+  margin-top: 3px;
 }

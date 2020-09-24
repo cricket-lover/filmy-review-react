@@ -1,30 +1,34 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter, Switch, Route, useParams } from 'react-router-dom';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Homepage from './components/Homepage';
 import MoviePage from './components/MoviePage';
 import './App.css';
 
-const MovieData = ({ details }) => {
-  const { id } = useParams();
-  const data = details.find((movie) => movie.id === +id);
-  return <MoviePage details={data} />;
-};
-
 function App() {
   const [movieDetails, setMovieDetails] = useState([]);
+  const [searchText, setSearchText] = useState('');
   useEffect(() => {
     fetch('/api/allMovies')
       .then((res) => res.json())
       .then(setMovieDetails);
   }, []);
+
+  const filteredMovies = movieDetails.filter((movie) =>
+    movie.title.match(searchText)
+  );
+
   return (
     <BrowserRouter>
       <Switch>
         <Route exact path="/">
-          <Homepage details={movieDetails} />
+          <Homepage
+            details={filteredMovies}
+            handleChange={setSearchText}
+            value={searchText}
+          />
         </Route>
         <Route exact path="/movie/:id">
-          <MovieData details={movieDetails} />
+          <MoviePage handleChange={setSearchText} value={searchText} />
         </Route>
       </Switch>
     </BrowserRouter>

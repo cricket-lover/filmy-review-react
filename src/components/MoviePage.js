@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import MovieCard from './MovieCard';
-import Header from './Header';
-import ReviewList from './ReviewList';
 import { useParams } from 'react-router-dom';
+import Header from './Header';
+import MovieCard from './MovieCard';
 import AddReview from './AddReview';
+import ReviewList from './ReviewList';
 
 const MoviePage = (props) => {
   const [movieDetails, setMovieDetails] = useState({ reviews: [] });
@@ -26,13 +26,11 @@ const MoviePage = (props) => {
 
   return (
     <div>
-      <Header />
+      <Header handleChange={props.handleChange} value={props.value} />
       <div className="movie-container">
         <MovieCard details={movieDetails} />
-        <div className="reviews">
-          <AddReview handleClick={handleClick} />
-          <ReviewList reviews={movieDetails.reviews} />
-        </div>
+        <ReviewList reviews={movieDetails.reviews} />
+        <AddReview handleClick={handleClick} />
       </div>
     </div>
   );

@@ -1,11 +1,18 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 const Header = (props) => {
+  const history = useHistory();
+  const updateHistory = () => {
+    props.handleChange('');
+    history.push('/');
+  };
   return (
-    <Link to="/">
-      <div className="header">Filmy Review</div>;
-    </Link>
+    <div className="header">
+      <div className="logo-name" onClick={updateHistory}>
+        Filmy Review
+      </div>
+    </div>
   );
 };
 

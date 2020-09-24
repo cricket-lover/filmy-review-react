@@ -4,8 +4,8 @@ const MovieCard = ({ details }) => {
   return (
     <div className="movie-card">
       <img src={details.image} alt={details.title} className="movie-poster" />
-      <h1>{details.title}</h1>
-      <h6>{details.dateOfRelease}</h6>
+      <div className="movie-title">{details.title}</div>
+      <div className="release-date">{details.dateOfRelease}</div>
     </div>
   );
 };
