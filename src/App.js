@@ -12,9 +12,9 @@ function App() {
       .then((res) => res.json())
       .then(setMovieDetails);
   }, []);
-
+  const regex = new RegExp(searchText, 'i');
   const filteredMovies = movieDetails.filter((movie) =>
-    movie.title.match(searchText)
+    movie.title.match(regex)
   );
 
   return (

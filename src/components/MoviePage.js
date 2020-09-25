@@ -29,8 +29,8 @@ const MoviePage = (props) => {
       <Header handleChange={props.handleChange} value={props.value} />
       <div className="movie-container">
         <MovieCard details={movieDetails} />
-        <ReviewList reviews={movieDetails.reviews} />
         <AddReview handleClick={handleClick} />
+        <ReviewList reviews={movieDetails.reviews} />
       </div>
     </div>
   );

@@ -58,6 +58,7 @@
 
 .search {
   margin-top: 2rem;
+  display: flex;
 }
 
 .search-text {
@@ -70,7 +71,6 @@
 
 .search-image {
   height: 1.2em;
-  margin-left: 0.5rem;
   margin-right: 10rem;
 }
 
@@ -108,11 +108,14 @@
 }
 
 .add-content {
-  height: 15rem;
+  height: 13rem;
   margin: 0.2rem;
+  outline: none;
+  font-family: sans-serif;
 }
 .add-headline {
   height: 2rem;
+  outline: none;
   margin: 0.2rem;
 }
 .add-review {
@@ -126,7 +129,8 @@
 
 .review-list {
   margin: 2rem;
-  width: 15rem;
+  width: 30rem;
+  text-align: justify;
 }
 
 .add-review-text {

@@ -18,13 +18,13 @@ const AddReview = (props) => {
       <input
         value={headline}
         type="text"
-        placeholder="Add your title here"
+        placeholder="Add your headline here"
         className="add-headline"
         onChange={(event) => {
           setHeadline(event.target.value);
         }}
       />
-      <input
+      <textarea
         value={content}
         type="text"
         placeholder="Add your content here"
