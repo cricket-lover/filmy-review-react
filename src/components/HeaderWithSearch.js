@@ -20,7 +20,7 @@ const HeaderWithSearch = (props) => {
           placeholder="Search your movie here"
           className="search-text"
           onChange={(event) => {
-            props.handleChange(event.target.value);
+            props.handleChange(event.target.value.trim());
           }}
         />
         <img src={searchImage} alt="search" className="search-image" />
