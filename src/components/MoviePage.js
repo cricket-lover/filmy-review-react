@@ -26,7 +26,11 @@ const MoviePage = (props) => {
 
   return (
     <div>
-      <Header handleChange={props.handleChange} value={props.value} />
+      <Header
+        handleChange={props.handleChange}
+        value={props.value}
+        user={props.user}
+      />
       <div className="movie-container">
         <MovieCard details={movieDetails} />
         <AddReview handleClick={handleClick} />

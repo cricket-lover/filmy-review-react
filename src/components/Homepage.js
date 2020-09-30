@@ -1,11 +1,24 @@
-import React from 'react';
-import HeaderWithSearch from './HeaderWithSearch';
+import React, { useEffect } from 'react';
+import Header from './Header';
 import Dashboard from './Dashboard';
 
-const Homepage = ({ details, handleChange, value }) => {
+const Homepage = ({ details, handleChange, value, user, setUser }) => {
+  useEffect(() => {
+    fetch('/api/getUser')
+      .then((res) => res.json())
+      .then((data) => {
+        setUser(data);
+      });
+  }, []);
   return (
     <div className="main-container">
-      <HeaderWithSearch handleChange={handleChange} value={value} />
+      <Header
+        isHomePage={true}
+        handleChange={handleChange}
+        value={value}
+        user={user}
+        setUser={setUser}
+      />
       <Dashboard details={details} />
     </div>
   );

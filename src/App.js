@@ -17,6 +17,8 @@ function App() {
     movie.title.match(regex)
   );
 
+  const [user, setUser] = useState({});
+
   return (
     <BrowserRouter>
       <Switch>
@@ -25,10 +27,17 @@ function App() {
             details={filteredMovies}
             handleChange={setSearchText}
             value={searchText}
+            user={user}
+            setUser={setUser}
           />
         </Route>
         <Route exact path="/movie/:id">
-          <MoviePage handleChange={setSearchText} value={searchText} />
+          <MoviePage
+            handleChange={setSearchText}
+            value={searchText}
+            user={user}
+            setUser={setUser}
+          />
         </Route>
       </Switch>
     </BrowserRouter>
