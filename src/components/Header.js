@@ -20,7 +20,7 @@ const Buttons = ({ user, setUser }) => {
   if (user.id) return <UserProfile user={user} setUser={setUser} />;
   else
     return (
-      <a className="login" href={`http://localhost:3001/authenticate`}>
+      <a className="login" href={process.env.REACT_APP_LOGIN_REDIRECT_URL}>
         Login
       </a>
     );
