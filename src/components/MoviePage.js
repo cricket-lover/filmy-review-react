@@ -30,6 +30,7 @@ const MoviePage = (props) => {
         handleChange={props.handleChange}
         value={props.value}
         user={props.user}
+        setUser={props.setUser}
       />
       <div className="movie-container">
         <MovieCard details={movieDetails} />
